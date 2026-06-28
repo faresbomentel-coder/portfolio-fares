@@ -10,7 +10,7 @@ function Projects() {
   const featuredProjects = projects.slice(0, 2);
 
   return (
-    <section id="projects" className="py-16 md:py-20">
+    <section id="projects" className="py-16 md:py-20 bg-white dark:bg-slate-950 transition-colors">
       <Container>
         <SectionTitle
           subtitle="Réalisations"

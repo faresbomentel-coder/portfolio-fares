@@ -20,7 +20,7 @@ function JourneyTimeline({ journey }) {
 
   return (
     <div>
-      <h3 className="text-2xl font-bold text-slate-900 mb-8 text-center">
+      <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-8 text-center">
         Parcours Professionnel
       </h3>
 
@@ -54,14 +54,14 @@ function JourneyTimeline({ journey }) {
                     isEven ? "md:text-right md:pr-8" : "md:text-left md:pl-8"
                   } pl-12 md:pl-0`}
                 >
-                  <div className="bg-white rounded-xl p-6 shadow-md border border-slate-200 hover:shadow-lg transition-shadow">
-                    <span className="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-3">
+                  <div className="bg-white dark:bg-slate-900 rounded-xl p-6 shadow-md border border-slate-200 dark:border-slate-800 hover:shadow-lg transition-shadow">
+                    <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-cyan-400 rounded-full text-sm font-semibold mb-3">
                       {item.year}
                     </span>
-                    <h4 className="text-lg font-bold text-slate-900 mb-2">
+                    <h4 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2">
                       {item.title}
                     </h4>
-                    <p className="text-slate-600 text-sm leading-relaxed">
+                    <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
                       {item.description}
                     </p>
                   </div>

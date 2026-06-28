@@ -25,7 +25,7 @@ function HeroSocials() {
             transition={{ delay: 1 + index * 0.1 }}
             whileHover={{ scale: 1.1, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            className="w-12 h-12 flex items-center justify-center bg-white border border-slate-200 rounded-xl shadow-sm hover:shadow-md hover:border-blue-600 transition-all duration-300 text-slate-700 hover:text-blue-600"
+            className="w-12 h-12 flex items-center justify-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl shadow-sm hover:shadow-md hover:border-blue-600 dark:hover:border-cyan-400 transition-all duration-300 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400"
             aria-label={social.name}
           >
             <Icon size={20} />

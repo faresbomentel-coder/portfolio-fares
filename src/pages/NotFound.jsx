@@ -1,5 +1,7 @@
+import NotFoundContent from "../components/sections/notFound/NotFoundContent";
+
 function NotFound() {
-  return <h1 className="text-3xl font-bold">Page Not Found</h1>;
+  return <NotFoundContent />;
 }
 
 export default NotFound;

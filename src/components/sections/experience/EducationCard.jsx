@@ -27,10 +27,10 @@ function EducationCard({ education, index }) {
             <HiAcademicCap className="text-white" size={24} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-slate-900 mb-2">{diploma}</h3>
-            <p className="text-cyan-600 font-semibold mb-2">{institution}</p>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">{diploma}</h3>
+            <p className="text-cyan-600 dark:text-cyan-400 font-semibold mb-2">{institution}</p>
             <div className="flex flex-wrap items-center gap-3 text-sm">
-              <div className="flex items-center gap-2 text-slate-600">
+              <div className="flex items-center gap-2 text-slate-600 dark:text-slate-300">
                 <HiCalendar className="flex-shrink-0" />
                 <span>{period}</span>
               </div>
@@ -43,8 +43,8 @@ function EducationCard({ education, index }) {
         </div>
 
         {/* Status Badge */}
-        <div className={`${statusBg} rounded-lg p-3 mb-4`}>
-          <p className={`text-sm ${statusColor} font-medium`}>
+        <div className={`${statusBg} dark:bg-slate-800 rounded-lg p-3 mb-4`}>
+          <p className={`text-sm ${statusColor} dark:text-green-400 font-medium`}>
             {isCompleted
               ? "✓ Diplôme obtenu avec succès"
               : "⏳ Formation complétée - En attente de délivrance officielle du diplôme"}
@@ -52,17 +52,17 @@ function EducationCard({ education, index }) {
         </div>
 
         {/* Description */}
-        <p className="text-slate-700 leading-relaxed mb-4">{description}</p>
+        <p className="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">{description}</p>
 
         {/* Skills */}
         {skills && skills.length > 0 && (
           <div>
-            <h4 className="text-sm font-semibold text-slate-700 mb-3 uppercase tracking-wide">
+            <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 uppercase tracking-wide">
               Compétences Acquises
             </h4>
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, idx) => (
-                <Badge key={idx} className="text-xs bg-blue-50 text-blue-700">
+                <Badge key={idx} className="text-xs bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-cyan-400">
                   {skill}
                 </Badge>
               ))}

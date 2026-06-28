@@ -5,7 +5,7 @@ import { whyChooseMe } from "../../../data/whyChooseMe";
 
 function WhyChooseMe() {
   return (
-    <section className="py-16 md:py-20 bg-slate-50">
+    <section className="py-16 md:py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
       <Container>
         <SectionTitle
           subtitle="Mes Atouts"

@@ -5,25 +5,25 @@ function ProjectArchitecture({ project }) {
   const { architecture } = project;
 
   return (
-    <section className="py-12 md:py-16 bg-slate-50">
+    <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 transition-colors">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-4 text-center">
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
             Architecture Technique
           </h2>
-          <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-slate-300 text-center mb-12 max-w-2xl mx-auto">
             Structure et organisation technique du projet.
           </p>
 
-          <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-100">
-            <div className="prose prose-slate max-w-none">
-              <p className="text-slate-700 leading-relaxed text-lg mb-6">
+          <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-900 dark:to-slate-800 border-blue-100 dark:border-slate-700">
+            <div className="prose prose-slate dark:prose-invert max-w-none">
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg mb-6">
                 {architecture}
               </p>
 
               {/* Architecture Diagram Placeholder */}
-              <div className="bg-white rounded-lg p-8 border-2 border-dashed border-slate-300 text-center">
-                <div className="text-slate-400 mb-4">
+              <div className="bg-white dark:bg-slate-950 rounded-lg p-8 border-2 border-dashed border-slate-300 dark:border-slate-700 text-center">
+                <div className="text-slate-400 dark:text-slate-500 mb-4">
                   <svg
                     className="w-16 h-16 mx-auto"
                     fill="none"
@@ -38,7 +38,7 @@ function ProjectArchitecture({ project }) {
                     />
                   </svg>
                 </div>
-                <p className="text-slate-500 font-medium">
+                <p className="text-slate-500 dark:text-slate-400 font-medium">
                   Diagramme d'architecture à venir
                 </p>
               </div>

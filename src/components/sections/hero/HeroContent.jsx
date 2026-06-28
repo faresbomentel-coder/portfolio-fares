@@ -18,7 +18,7 @@ function HeroContent() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2 }}
       >
-        <span className="text-blue-600 font-semibold text-lg">
+        <span className="text-blue-600 dark:text-cyan-400 font-semibold text-lg">
           👋 Bonjour, je suis
         </span>
       </motion.div>
@@ -28,7 +28,7 @@ function HeroContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-        className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900"
+        className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white"
       >
         {personalInfo.fullName}
       </motion.h1>
@@ -38,7 +38,7 @@ function HeroContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
-        className="text-2xl md:text-3xl font-semibold text-slate-700"
+        className="text-2xl md:text-3xl font-semibold text-slate-700 dark:text-slate-200"
       >
         {personalInfo.title}
       </motion.h2>
@@ -48,7 +48,7 @@ function HeroContent() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
-        className="text-lg text-cyan-600 font-medium"
+        className="text-lg text-cyan-600 dark:text-cyan-400 font-medium"
       >
         {personalInfo.subtitle}
       </motion.p>
@@ -58,7 +58,7 @@ function HeroContent() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
-        className="text-slate-600 text-lg leading-relaxed max-w-xl"
+        className="text-slate-600 dark:text-slate-300 text-lg leading-relaxed max-w-xl"
       >
         {personalInfo.description}
       </motion.p>
@@ -68,9 +68,9 @@ function HeroContent() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.7 }}
-        className="flex items-center gap-2 text-slate-600"
+        className="flex items-center gap-2 text-slate-600 dark:text-slate-300"
       >
-        <HiLocationMarker className="text-blue-600" size={20} />
+        <HiLocationMarker className="text-blue-600 dark:text-cyan-400" size={20} />
         <span>{personalInfo.location}</span>
       </motion.div>
 

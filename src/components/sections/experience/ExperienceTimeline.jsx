@@ -6,7 +6,7 @@ function ExperienceTimeline({ experiences, otherExperiences }) {
     <div>
       {/* Professional Experiences */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-slate-900 mb-6">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
           Expérience Professionnelle Textile
         </h3>
         <div className="space-y-6">
@@ -23,10 +23,10 @@ function ExperienceTimeline({ experiences, otherExperiences }) {
       {/* Other Experiences */}
       {otherExperiences && otherExperiences.length > 0 && (
         <div>
-          <h3 className="text-2xl font-bold text-slate-900 mb-4">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">
             Autres Expériences
           </h3>
-          <p className="text-slate-600 mb-4 text-sm">
+          <p className="text-slate-600 dark:text-slate-300 mb-4 text-sm">
             Expériences complémentaires acquises dans d'autres domaines
             professionnels.
           </p>
@@ -34,7 +34,7 @@ function ExperienceTimeline({ experiences, otherExperiences }) {
             {otherExperiences.map((exp) => (
               <Badge
                 key={exp.id}
-                className="text-sm bg-slate-100 text-slate-700 px-4 py-2"
+                className="text-sm bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 py-2"
               >
                 {exp.name}
               </Badge>

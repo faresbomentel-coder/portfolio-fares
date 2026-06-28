@@ -5,7 +5,7 @@ import { techStack } from "../../../data/techStack";
 
 function TechStack() {
   return (
-    <section className="py-16 md:py-20">
+    <section className="py-16 md:py-20 bg-white dark:bg-slate-950 transition-colors">
       <Container>
         <SectionTitle
           subtitle="Technologies"

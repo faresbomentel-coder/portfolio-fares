@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { HiMenu, HiX } from "react-icons/hi";
 import { navigationLinks } from "../../data/navigation";
+import ThemeToggle from "../ui/ThemeToggle";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,42 +11,50 @@ function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="border-b bg-white">
+    <nav className="border-b bg-white dark:bg-slate-950 dark:border-slate-800 transition-colors">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <NavLink to="/" className="text-2xl font-bold" onClick={closeMenu}>
-          Fares<span className="text-blue-600">.</span>
+        <NavLink
+          to="/"
+          className="text-2xl font-bold text-slate-900 dark:text-slate-100"
+          onClick={closeMenu}
+        >
+          Fares<span className="text-blue-600 dark:text-cyan-400">.</span>
         </NavLink>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-6">
+        <div className="hidden md:flex gap-6 items-center">
           {navigationLinks.map((link) => (
             <NavLink
               key={link.path}
               to={link.path}
               className={({ isActive }) =>
                 isActive
-                  ? "text-blue-600 font-semibold"
-                  : "text-gray-700 hover:text-blue-600"
+                  ? "text-blue-600 dark:text-cyan-400 font-semibold"
+                  : "text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
               }
             >
               {link.name}
             </NavLink>
           ))}
+          <ThemeToggle />
         </div>
 
-        {/* Mobile Hamburger Button */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden text-gray-700 hover:text-blue-600 transition-colors"
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
-        </button>
+        {/* Mobile Menu Controls */}
+        <div className="md:hidden flex items-center gap-3">
+          <ThemeToggle />
+          <button
+            onClick={toggleMenu}
+            className="text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <HiX size={28} /> : <HiMenu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t bg-white">
+        <div className="md:hidden border-t bg-white dark:bg-slate-950 dark:border-slate-800">
           <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-4">
             {navigationLinks.map((link) => (
               <NavLink
@@ -54,8 +63,8 @@ function Navbar() {
                 onClick={closeMenu}
                 className={({ isActive }) =>
                   isActive
-                    ? "text-blue-600 font-semibold"
-                    : "text-gray-700 hover:text-blue-600"
+                    ? "text-blue-600 dark:text-cyan-400 font-semibold"
+                    : "text-gray-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 transition-colors"
                 }
               >
                 {link.name}

@@ -19,9 +19,9 @@ function ExperienceCard({ experience, index }) {
             <HiBriefcase className="text-white" size={24} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-xl font-bold text-slate-900 mb-1">{role}</h3>
-            <p className="text-blue-600 font-semibold mb-2">{company}</p>
-            <div className="flex items-center gap-2 text-sm text-slate-600">
+            <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-1">{role}</h3>
+            <p className="text-blue-600 dark:text-cyan-400 font-semibold mb-2">{company}</p>
+            <div className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
               <HiCalendar className="flex-shrink-0" />
               <span>{period}</span>
             </div>
@@ -29,7 +29,7 @@ function ExperienceCard({ experience, index }) {
         </div>
 
         {/* Description */}
-        <p className="text-slate-700 leading-relaxed">{description}</p>
+        <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{description}</p>
       </Card>
     </motion.div>
   );

@@ -15,7 +15,7 @@ function SkillTabs({ categories, activeCategory, onCategoryChange }) {
                 className={`relative px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 whitespace-nowrap ${
                   isActive
                     ? "text-white"
-                    : "text-slate-700 hover:text-blue-600 hover:bg-blue-50"
+                    : "text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-cyan-400 hover:bg-blue-50 dark:hover:bg-slate-800"
                 }`}
                 whileTap={{ scale: 0.95 }}
               >
@@ -38,7 +38,7 @@ function SkillTabs({ categories, activeCategory, onCategoryChange }) {
 
       {/* Visual Indicator */}
       <div className="text-center mt-4">
-        <p className="text-sm text-slate-500">
+        <p className="text-sm text-slate-500 dark:text-slate-400">
           Sélectionnez une catégorie pour voir les compétences
         </p>
       </div>

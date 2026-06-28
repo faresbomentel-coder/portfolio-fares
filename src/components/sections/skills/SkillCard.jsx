@@ -19,27 +19,27 @@ function SkillCard({ skill, index }) {
             <Icon className="text-white" size={24} />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-bold text-slate-900 mb-1">{name}</h3>
+            <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-1">{name}</h3>
             <Badge className="text-xs">{level}</Badge>
           </div>
         </div>
 
         {/* Description */}
-        <p className="text-slate-600 text-sm mb-4 leading-relaxed">
+        <p className="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
           {description}
         </p>
 
         {/* Concepts */}
         {concepts && concepts.length > 0 && (
           <div className="mb-4">
-            <h4 className="text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wide">
+            <h4 className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wide">
               Concepts Clés
             </h4>
             <div className="flex flex-wrap gap-2">
               {concepts.map((concept, idx) => (
                 <span
                   key={idx}
-                  className="text-xs bg-slate-100 text-slate-700 px-2 py-1 rounded"
+                  className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2 py-1 rounded"
                 >
                   {concept}
                 </span>
@@ -50,11 +50,11 @@ function SkillCard({ skill, index }) {
 
         {/* Used In */}
         {usedIn && usedIn.length > 0 && (
-          <div className="mt-auto pt-4 border-t border-slate-100">
-            <h4 className="text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wide">
+          <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800">
+            <h4 className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wide">
               Utilisé Dans
             </h4>
-            <p className="text-xs text-slate-600">{usedIn.join(" • ")}</p>
+            <p className="text-xs text-slate-600 dark:text-slate-400">{usedIn.join(" • ")}</p>
           </div>
         )}
       </Card>

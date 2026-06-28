@@ -85,13 +85,13 @@ function ContactForm() {
     return (
       <Card className="text-center">
         <div className="py-8">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <FaCheckCircle className="text-green-600 text-3xl" />
+          <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
+            <FaCheckCircle className="text-green-600 dark:text-green-400 text-3xl" />
           </div>
-          <h3 className="text-2xl font-bold text-slate-900 mb-2">
+          <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-2">
             Merci pour votre message
           </h3>
-          <p className="text-slate-600">
+          <p className="text-slate-600 dark:text-slate-300">
             Je vous répondrai dès que possible.
           </p>
         </div>
@@ -101,7 +101,7 @@ function ContactForm() {
 
   return (
     <Card>
-      <h3 className="text-xl font-bold text-slate-900 mb-6">
+      <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-6">
         Envoyez-moi un message
       </h3>
       <form onSubmit={handleSubmit} className="space-y-5">
@@ -109,7 +109,7 @@ function ContactForm() {
         <div>
           <label
             htmlFor="name"
-            className="block text-sm font-medium text-slate-700 mb-2"
+            className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
           >
             Nom complet <span className="text-red-500">*</span>
           </label>
@@ -120,8 +120,8 @@ function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className={`w-full px-4 py-3 border ${
-              errors.name ? "border-red-500" : "border-slate-300"
-            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all`}
+              errors.name ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="Votre nom complet"
           />
           {errors.name && (
@@ -133,7 +133,7 @@ function ContactForm() {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-slate-700 mb-2"
+            className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
           >
             Email <span className="text-red-500">*</span>
           </label>
@@ -144,8 +144,8 @@ function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className={`w-full px-4 py-3 border ${
-              errors.email ? "border-red-500" : "border-slate-300"
-            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all`}
+              errors.email ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="votre.email@exemple.com"
           />
           {errors.email && (
@@ -157,7 +157,7 @@ function ContactForm() {
         <div>
           <label
             htmlFor="subject"
-            className="block text-sm font-medium text-slate-700 mb-2"
+            className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
           >
             Sujet <span className="text-red-500">*</span>
           </label>
@@ -168,8 +168,8 @@ function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             className={`w-full px-4 py-3 border ${
-              errors.subject ? "border-red-500" : "border-slate-300"
-            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all`}
+              errors.subject ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="Le sujet de votre message"
           />
           {errors.subject && (
@@ -181,7 +181,7 @@ function ContactForm() {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-slate-700 mb-2"
+            className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2"
           >
             Message <span className="text-red-500">*</span>
           </label>
@@ -192,8 +192,8 @@ function ContactForm() {
             onChange={handleChange}
             rows="6"
             className={`w-full px-4 py-3 border ${
-              errors.message ? "border-red-500" : "border-slate-300"
-            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none`}
+              errors.message ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+            } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all resize-none bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="Votre message..."
           />
           {errors.message && (

@@ -26,18 +26,18 @@ function ProjectCard({ project, index }) {
       <Card className="h-full flex flex-col">
         {/* Header */}
         <div className="mb-4">
-          <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
-          <p className="text-sm text-blue-600 font-semibold">{company}</p>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">{title}</h3>
+          <p className="text-sm text-blue-600 dark:text-cyan-400 font-semibold">{company}</p>
         </div>
 
         {/* Description */}
-        <p className="text-slate-600 text-sm leading-relaxed mb-4 flex-grow">
+        <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-4 flex-grow">
           {shortDescription}
         </p>
 
         {/* Technologies */}
         <div className="mb-6">
-          <h4 className="text-xs font-semibold text-slate-700 mb-2 uppercase tracking-wide">
+          <h4 className="text-xs font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wide">
             Technologies
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -47,7 +47,7 @@ function ProjectCard({ project, index }) {
               </Badge>
             ))}
             {technologies.length > 6 && (
-              <Badge className="text-xs bg-slate-100 text-slate-600">
+              <Badge className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                 +{technologies.length - 6}
               </Badge>
             )}

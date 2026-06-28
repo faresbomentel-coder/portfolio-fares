@@ -16,10 +16,10 @@ function WhyChooseMeCard({ icon: Icon, title, description, index }) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
+        <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">{title}</h3>
 
         {/* Description */}
-        <p className="text-slate-600 leading-relaxed">{description}</p>
+        <p className="text-slate-600 dark:text-slate-300 leading-relaxed">{description}</p>
       </Card>
     </motion.div>
   );

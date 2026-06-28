@@ -11,10 +11,10 @@ function AboutContent() {
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        <h3 className="text-2xl font-bold text-slate-900 mb-4">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">
           À Propos de Moi
         </h3>
-        <p className="text-slate-700 text-lg leading-relaxed">
+        <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">
           {about.introduction}
         </p>
       </motion.div>
@@ -26,8 +26,8 @@ function AboutContent() {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <h3 className="text-2xl font-bold text-slate-900 mb-4">Mon Parcours</h3>
-        <p className="text-slate-700 text-lg leading-relaxed">{about.story}</p>
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-4">Mon Parcours</h3>
+        <p className="text-slate-700 dark:text-slate-300 text-lg leading-relaxed">{about.story}</p>
       </motion.div>
     </div>
   );

@@ -6,7 +6,7 @@ import AboutAvailability from "./AboutAvailability";
 
 function About() {
   return (
-    <section id="about" className="py-16 md:py-20 bg-slate-50">
+    <section id="about" className="py-16 md:py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
       <Container>
         <SectionTitle
           subtitle="Qui Suis-Je"

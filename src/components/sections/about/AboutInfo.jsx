@@ -19,10 +19,10 @@ function AboutInfo() {
 
             {/* Content */}
             <div className="flex-1 min-w-0">
-              <p className="text-sm text-slate-500 font-medium mb-1">
+              <p className="text-sm text-slate-500 dark:text-slate-400 font-medium mb-1">
                 {info.label}
               </p>
-              <p className="text-slate-900 font-semibold break-words">
+              <p className="text-slate-900 dark:text-slate-100 font-semibold break-words">
                 {info.value}
               </p>
             </div>

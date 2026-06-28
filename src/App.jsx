@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
+import { useEffect, useState } from "react";
+import Loader from "./components/ui/Loader";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import ScrollToTop from "./components/ui/ScrollToTop";
@@ -15,6 +16,19 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <BrowserRouter>
       <ScrollToTopOnRouteChange />

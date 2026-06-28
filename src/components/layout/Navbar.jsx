@@ -13,12 +13,17 @@ function Navbar() {
   return (
     <nav className="border-b bg-white dark:bg-slate-950 dark:border-slate-800 transition-colors">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <NavLink
-          to="/"
-          className="text-2xl font-bold text-slate-900 dark:text-slate-100"
-          onClick={closeMenu}
-        >
-          Fares<span className="text-blue-600 dark:text-cyan-400">.</span>
+        <NavLink to="/" onClick={closeMenu} className="flex items-center gap-3">
+          <img
+            src="/favicon.png"
+            alt="Fares Logo"
+            className="w-16 h-16 rounded-xl object-cover"
+          />
+
+          <span className="text-2xl font-bold text-slate-900 dark:text-slate-100">
+            Fares
+            <span className="text-blue-600 dark:text-cyan-400">.</span>
+          </span>
         </NavLink>
 
         {/* Desktop Navigation */}

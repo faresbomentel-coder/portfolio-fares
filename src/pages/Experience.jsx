@@ -1,5 +1,7 @@
+import ExperienceSection from "../components/sections/experience/Experience";
+
 function Experience() {
-  return <h1 className="text-3xl font-bold">Experience Page</h1>;
+  return <ExperienceSection />;
 }
 
 export default Experience;

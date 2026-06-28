@@ -1,5 +1,7 @@
+import SkillsSection from "../components/sections/skills/Skills";
+
 function Skills() {
-  return <h1 className="text-3xl font-bold">Skills Page</h1>;
+  return <SkillsSection />;
 }
 
 export default Skills;

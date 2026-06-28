@@ -12,7 +12,7 @@ function Skills() {
   const filteredSkills = getSkillsByCategory(activeCategory);
 
   return (
-    <section className="py-16 md:py-20 bg-slate-50">
+    <section id="skills" className="py-16 md:py-20 bg-slate-50">
       <Container>
         <SectionTitle
           subtitle="Compétences"

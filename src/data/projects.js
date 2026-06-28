@@ -1,324 +1,182 @@
+import textileDashboard from "../assets/images/projects/textile/dashboard.webp";
+import textileCommandes from "../assets/images/projects/textile/commandes.webp";
+import textileProduction from "../assets/images/projects/textile/production.webp";
+import textileFils from "../assets/images/projects/textile/fils.webp";
+
+import gamDashboard from "../assets/images/projects/gam/dashboard.webp";
+import gamMachines from "../assets/images/projects/gam/machines.webp";
+import gamIntervention from "../assets/images/projects/gam/intervention.webp";
+import gamChecklist from "../assets/images/projects/gam/checklist.webp";
+import textileMcd from "../assets/images/projects/textile/analysis/mcd.webp";
+import textileUseCase from "../assets/images/projects/textile/analysis/use-case.webp";
 export const projects = [
   {
     id: 1,
     slug: "textile-management",
-    title: "Gestion de Production Textile",
+
+    title: "Textile Management",
+    subtitle: "Plateforme de gestion de production textile",
+
     company: "Compagnie Industrielle de Bonneterie (CIB)",
-    subtitle: "Application web de gestion complète pour la production textile",
+    period: "2025 - 2026",
+    role: "Développeur Full Stack",
+    status: "Terminé",
+    github: "https://github.com/faresbomentel-coder/textile-management/",
+
+    liveDemo: null,
+
     shortDescription:
-      "Système complet de gestion de production pour l'industrie textile avec suivi des commandes, machines, productions et livraisons.",
+      "Application Full Stack dédiée à la gestion complète d'un atelier de production textile.",
+
+    description:
+      "Développement d'une application web Full Stack permettant de gérer les fournisseurs, les fils, les commandes, les sous-commandes, la production, les pièces et les livraisons avec un tableau de bord statistique.",
     overview:
-      "Application web complète développée pour la Compagnie Industrielle de Bonneterie (CIB) permettant la gestion de l'ensemble du processus de production textile, depuis la réception des commandes clients jusqu'à la livraison finale. Le système offre une vue d'ensemble des opérations avec un tableau de bord statistique détaillé.",
+      "Textile Management est une application web Full Stack développée pour digitaliser la gestion d'un atelier de tricotage. Elle permet de centraliser le suivi des fournisseurs, des fils, des commandes, des sous-commandes, de la production, des pièces, des livraisons et des statistiques.",
+
     problem:
-      "L'entreprise gérait manuellement les commandes, la production et les stocks, ce qui entraînait des erreurs, des retards et une difficulté à suivre l'état des commandes en temps réel. Il n'y avait pas de système centralisé pour coordonner les différents départements (commandes, production, livraison).",
+      "La gestion manuelle de la production textile rend difficile le suivi précis du stock, des commandes, des sous-commandes et de l'avancement de la production. Les informations sont dispersées et les décisions prennent plus de temps.",
+
     solution:
-      "Développement d'une application web moderne avec une architecture API REST permettant une gestion centralisée et en temps réel de tous les aspects de la production textile. Le système offre une interface intuitive pour chaque acteur (gestionnaire et propriétaire) avec des fonctionnalités adaptées à leurs besoins.",
-    architecture:
-      "Architecture moderne basée sur une séparation frontend/backend. Le backend Laravel expose une API REST sécurisée qui gère la logique métier et les accès à la base de données. Le frontend React consomme cette API et offre une interface utilisateur réactive et moderne. L'authentification basée sur les rôles garantit que chaque utilisateur accède uniquement aux fonctionnalités autorisées.",
-    database: {
-      description:
-        "Base de données relationnelle MySQL optimisée pour gérer les relations complexes entre commandes, productions, machines et livraisons. Utilisation d'Eloquent ORM pour des requêtes performantes et maintenables.",
-      models: [
-        "Fournisseurs",
-        "Fils",
-        "Clients",
-        "Commandes",
-        "Sous-commandes",
-        "Machines",
-        "Productions",
-        "Pièces",
-        "Rattacheurs",
-        "Livraisons",
-        "Utilisateurs",
-        "Rôles",
-      ],
-      relations: [
-        "Une commande appartient à un client et contient plusieurs sous-commandes",
-        "Une sous-commande utilise plusieurs types de fils (relation many-to-many)",
-        "Une sous-commande peut être produite sur différentes machines",
-        "Une production est liée à une machine et une sous-commande spécifique",
-        "Les pièces produites sont rattachées à une production et un rattacheur",
-        "Une livraison regroupe plusieurs sous-commandes pour un client",
-        "Le dashboard agrège les données de production, stock et statistiques",
-      ],
-    },
-    features: [
-      {
-        title: "Gestion des Fournisseurs et Fils",
-        description:
-          "Système complet de gestion des fournisseurs de matières premières et suivi des stocks de fils avec leurs caractéristiques techniques.",
-      },
-      {
-        title: "Gestion des Clients et Commandes",
-        description:
-          "Interface pour créer et suivre les commandes clients avec détails complets, dates de livraison et statuts.",
-      },
-      {
-        title: "Sous-commandes Détaillées",
-        description:
-          "Décomposition des commandes en sous-commandes avec spécifications techniques, quantités et fils nécessaires.",
-      },
-      {
-        title: "Gestion des Machines",
-        description:
-          "Suivi de l'état des machines de tricotage, leur disponibilité et leurs affectations aux productions.",
-      },
-      {
-        title: "Suivi de Production",
-        description:
-          "Enregistrement en temps réel de l'avancement de la production par machine et sous-commande.",
-      },
-      {
-        title: "Gestion des Pièces et Rattacheurs",
-        description:
-          "Suivi des pièces produites, leur qualité et les rattacheurs assignés au contrôle qualité.",
-      },
-      {
-        title: "Préparation des Livraisons",
-        description:
-          "Groupement des sous-commandes terminées en livraisons avec génération de documents.",
-      },
-      {
-        title: "Dashboard Statistique",
-        description:
-          "Tableau de bord avec statistiques de production, état des stocks, commandes en cours et indicateurs de performance.",
-      },
-      {
-        title: "Système de Rôles",
-        description:
-          "Gestion des permissions avec deux rôles principaux : Gestionnaire (opérations quotidiennes) et Propriétaire (accès complet).",
-      },
-    ],
+      "J'ai conçu une application basée sur React et Laravel REST API afin de centraliser les données, automatiser le suivi des opérations et offrir un tableau de bord clair pour le gestionnaire et le propriétaire.",
     technologies: [
-      { name: "React", category: "Frontend" },
-      { name: "Laravel", category: "Backend" },
-      { name: "MySQL", category: "Database" },
-      { name: "REST API", category: "Backend" },
-      { name: "Tailwind CSS", category: "Frontend" },
-      { name: "Eloquent ORM", category: "Backend" },
-      { name: "Git", category: "Tools" },
-      { name: "Axios", category: "Frontend" },
-      { name: "React Router", category: "Frontend" },
+      "React",
+      "Laravel",
+      "PHP",
+      "MySQL",
+      "Tailwind CSS",
+      "REST API",
+    ],
+
+    features: [
+      "Gestion des fournisseurs",
+      "Gestion des fils",
+      "Gestion des commandes",
+      "Gestion des sous-commandes",
+      "Suivi de production",
+      "Gestion des pièces",
+      "Gestion des livraisons",
+      "Dashboard statistique",
     ],
     challenges: [
-      {
-        title: "Relations de Base de Données Complexes",
-        description:
-          "Modélisation des relations entre commandes, sous-commandes, fils, machines et productions nécessitant une conception MCD/MLD rigoureuse.",
-        solution:
-          "Utilisation de Merise pour la conception avec normalisation appropriée et relations many-to-many via tables pivot.",
-      },
-      {
-        title: "Calcul des Stocks en Temps Réel",
-        description:
-          "Nécessité de calculer dynamiquement les stocks de fils disponibles en fonction des commandes en cours.",
-        solution:
-          "Implémentation de requêtes optimisées avec Eloquent et utilisation de scopes pour les calculs récurrents.",
-      },
-      {
-        title: "Gestion des États de Production",
-        description:
-          "Suivi complexe des différents états des sous-commandes (en attente, en production, terminée, livrée).",
-        solution:
-          "Mise en place d'une machine à états avec validation des transitions et historique des changements.",
-      },
-      {
-        title: "Interface Utilisateur Réactive",
-        description:
-          "Nécessité d'une interface fluide malgré la quantité importante de données à afficher.",
-        solution:
-          "Utilisation de React avec state management efficace, lazy loading et pagination côté serveur.",
-      },
+      "Modéliser des relations complexes entre commandes, sous-commandes, fils, machines et productions.",
+      "Gérer le suivi du stock de fils et les besoins liés à chaque sous-commande.",
+      "Organiser les données de production pour obtenir des statistiques exploitables.",
     ],
+
     results: [
-      "Réduction de 60% du temps de traitement des commandes",
-      "Élimination des erreurs de saisie manuelle",
-      "Visibilité en temps réel sur l'état de production",
-      "Amélioration de la coordination entre départements",
-      "Génération automatique de rapports et statistiques",
-      "Satisfaction client accrue grâce au suivi précis des commandes",
+      "Centralisation des informations de production textile dans une seule application.",
+      "Meilleur suivi des commandes, sous-commandes, productions et livraisons.",
+      "Création d'un tableau de bord permettant une lecture rapide des statistiques importantes.",
+    ],
+    cover: textileDashboard,
+    architecture: [
+      "React Frontend",
+      "Axios",
+      "Laravel REST API",
+      "Eloquent ORM",
+      "MySQL Database",
+    ],
+
+    analysisDiagrams: [],
+
+    challenges: [
+      {
+        title: "Cycle de maintenance",
+        description:
+          "Gérer les maintenances selon des cycles de 30 ou 60 jours pour chaque machine.",
+        solution:
+          "Calcul automatique des alertes selon la dernière date de maintenance et la durée du cycle.",
+      },
+      {
+        title: "Affectation des techniciens",
+        description:
+          "Organiser les interventions avec plusieurs techniciens et un responsable checklist.",
+        solution:
+          "Utilisation de relations pivot entre interventions, techniciens et machines.",
+      },
+      {
+        title: "Checklist",
+        description:
+          "Permettre au technicien de remplir une checklist claire pour chaque intervention.",
+        solution:
+          "Création d'un module checklist lié à l'intervention, la machine et le technicien responsable.",
+      },
     ],
     gallery: [
-      {
-        title: "Dashboard Principal",
-        description: "Vue d'ensemble des statistiques de production",
-      },
-      {
-        title: "Gestion des Commandes",
-        description: "Interface de création et suivi des commandes",
-      },
-      {
-        title: "Suivi de Production",
-        description: "Écran de monitoring des machines et productions",
-      },
-      {
-        title: "Gestion des Livraisons",
-        description: "Préparation et validation des livraisons clients",
-      },
+      textileDashboard,
+      textileCommandes,
+      textileProduction,
+      textileFils,
     ],
-    githubUrl: "",
-    liveUrl: "",
   },
+
   {
     id: 2,
     slug: "gam-maintenance",
+
     title: "GAM Maintenance",
-    company: "GAM - Gestion des Appareils de Manutention",
-    subtitle:
-      "Application de gestion de maintenance préventive pour appareils de levage",
+    subtitle: "Gestion des appareils de manutention",
+
+    company: "Projet de stage",
+    period: "2025",
+    role: "Développeur Full Stack",
+    status: "Completed",
+
+    github: "",
+    liveDemo: "",
+
     shortDescription:
-      "Système intelligent de gestion des interventions de maintenance préventive pour machines industrielles et appareils de levage avec alertes automatiques.",
+      "Application de gestion des interventions de maintenance.",
+
+    description:
+      "Application Full Stack permettant la gestion des clients, machines, techniciens, interventions, checklists et alertes de maintenance.",
     overview:
-      "Application web développée pour optimiser la gestion de la maintenance préventive des appareils de levage et machines industrielles. Le système permet de planifier les interventions, assigner des techniciens, suivre les checklists de maintenance et générer des alertes automatiques basées sur les cycles de maintenance (30 ou 60 jours).",
+      "GAM Maintenance est une application web Full Stack destinée à la gestion des interventions de maintenance des appareils de manutention. Elle permet de suivre les machines, les clients, les techniciens, les checklists, les alertes et l'historique des interventions.",
+
     problem:
-      "Les interventions de maintenance étaient planifiées manuellement, ce qui entraînait des oublis, des retards et un manque de traçabilité. Il n'y avait pas de système centralisé pour suivre l'historique de maintenance de chaque machine et alerter les équipes en temps voulu.",
+      "Le suivi manuel des maintenances peut entraîner des oublis, un manque de visibilité sur les prochaines interventions et une difficulté à gérer les techniciens, les machines et les checklists associées.",
+
     solution:
-      "Développement d'une application web intelligente avec calcul automatique des dates de maintenance, système d'alertes, gestion des interventions et checklists détaillées. Le système envoie des notifications pour les maintenances à venir et maintient un historique complet de chaque machine.",
-    architecture:
-      "Architecture REST API avec Laravel backend et React frontend. Le backend gère la logique métier complexe incluant le calcul des alertes de maintenance, la validation des interventions et la gestion des rôles (Admin/Technicien). Le frontend offre une interface intuitive pour planifier, suivre et valider les interventions.",
-    database: {
-      description:
-        "Base de données MySQL structurée pour gérer les relations entre clients, machines, techniciens et interventions. Système de calcul automatique des alertes basé sur les cycles de maintenance et les dates de dernière intervention.",
-      models: [
-        "Clients",
-        "Machines",
-        "Techniciens",
-        "Interventions",
-        "Checklists",
-        "Assignments",
-        "Alertes",
-        "Historique",
-        "Utilisateurs",
-        "Rôles",
-      ],
-      relations: [
-        "Un client possède plusieurs machines",
-        "Chaque machine a un cycle de maintenance (30 ou 60 jours)",
-        "Une intervention peut inclure plusieurs machines et techniciens (many-to-many)",
-        "Un technicien peut être responsable d'une checklist pour une machine spécifique",
-        "Une checklist est liée à une intervention et une machine",
-        "L'admin valide les interventions terminées",
-        "La validation met à jour la date de dernière maintenance",
-        "Les alertes sont calculées automatiquement selon le cycle et la dernière intervention",
-      ],
-    },
-    features: [
+      "J'ai développé une solution permettant d'organiser les interventions, d'affecter les techniciens, de remplir les checklists et de calculer les alertes de maintenance selon les cycles définis pour chaque machine.",
+    technologies: [
       {
-        title: "Gestion des Clients et Machines",
-        description:
-          "Base de données complète des clients avec leurs machines, caractéristiques techniques et cycles de maintenance associés.",
+        name: "React",
+        color: "cyan",
       },
       {
-        title: "Planification des Interventions",
-        description:
-          "Interface pour créer et planifier les interventions de maintenance avec sélection des machines et techniciens.",
+        name: "Laravel",
+        color: "red",
       },
       {
-        title: "Assignment des Techniciens",
-        description:
-          "Système d'affectation des techniciens aux interventions avec gestion de disponibilité et charge de travail.",
-      },
-      {
-        title: "Checklists de Maintenance",
-        description:
-          "Checklists détaillées personnalisables pour chaque type de machine avec points de contrôle obligatoires.",
-      },
-      {
-        title: "Système d'Alertes Automatiques",
-        description:
-          "Calcul automatique des alertes de maintenance basé sur les cycles (30/60 jours) et la date de dernière intervention.",
-      },
-      {
-        title: "Validation des Interventions",
-        description:
-          "Workflow de validation par l'admin avec mise à jour automatique des dates de maintenance.",
-      },
-      {
-        title: "Historique Complet",
-        description:
-          "Traçabilité complète de toutes les interventions par machine avec dates, techniciens et observations.",
-      },
-      {
-        title: "Dashboard de Monitoring",
-        description:
-          "Tableau de bord avec vue d'ensemble des interventions en cours, alertes actives et statistiques de maintenance.",
-      },
-      {
-        title: "Gestion des Rôles",
-        description:
-          "Deux rôles principaux : Admin (gestion complète et validation) et Technicien (exécution et checklists).",
+        name: "PHP",
+        color: "indigo",
       },
     ],
-    technologies: [
-      { name: "React", category: "Frontend" },
-      { name: "Laravel", category: "Backend" },
-      { name: "MySQL", category: "Database" },
-      { name: "REST API", category: "Backend" },
-      { name: "Tailwind CSS", category: "Frontend" },
-      { name: "Eloquent ORM", category: "Backend" },
-      { name: "Git", category: "Tools" },
-      { name: "Axios", category: "Frontend" },
-      { name: "React Router", category: "Frontend" },
+
+    features: [
+      "Gestion des clients",
+      "Gestion des machines",
+      "Gestion des interventions",
+      "Checklist",
+      "Dashboard",
+      "Alertes",
+      "Historique",
+      "Authentification",
     ],
     challenges: [
-      {
-        title: "Calcul Automatique des Alertes",
-        description:
-          "Implémentation d'un système intelligent pour calculer les dates de prochaine maintenance basées sur les cycles (30/60 jours).",
-        solution:
-          "Développement d'une logique backend avec Carbon (PHP) pour le calcul des dates et Laravel Scheduler pour vérifier quotidiennement les machines nécessitant une maintenance.",
-      },
-      {
-        title: "Relations Many-to-Many Complexes",
-        description:
-          "Gestion des relations entre interventions, machines et techniciens avec tables pivot et données supplémentaires.",
-        solution:
-          "Utilisation d'Eloquent avec relations many-to-many personnalisées et pivot models pour stocker des informations contextuelles.",
-      },
-      {
-        title: "Workflow de Validation",
-        description:
-          "Mise en place d'un système de validation avec mise à jour automatique des dates de maintenance.",
-        solution:
-          "Implémentation de transactions database pour garantir la cohérence des données lors de la validation et utilisation d'events Laravel.",
-      },
-      {
-        title: "Interface Temps Réel",
-        description:
-          "Nécessité d'afficher les alertes et statuts en temps réel sans recharger la page.",
-        solution:
-          "Utilisation de polling avec React et optimisation des requêtes API pour minimiser la charge serveur.",
-      },
+      "Organiser les relations entre clients, machines, techniciens, interventions et checklists.",
+      "Gérer les cycles de maintenance de 30 ou 60 jours pour chaque machine.",
+      "Mettre en place une logique d'alertes pour suivre les prochaines interventions.",
     ],
+
     results: [
-      "Réduction de 70% des maintenances oubliées ou en retard",
-      "Amélioration de la traçabilité avec historique complet",
-      "Optimisation de l'affectation des techniciens",
-      "Alertes automatiques 7 jours avant échéance",
-      "Génération automatique de rapports de maintenance",
-      "Augmentation de 45% de la satisfaction client",
-      "Conformité accrue aux normes de sécurité",
+      "Centralisation du suivi des machines et des interventions.",
+      "Meilleure visibilité sur les maintenances à venir.",
+      "Organisation claire des checklists et de l'historique des interventions.",
     ],
-    gallery: [
-      {
-        title: "Dashboard d'Alertes",
-        description: "Vue d'ensemble des alertes et interventions à venir",
-      },
-      {
-        title: "Planification d'Intervention",
-        description: "Interface de création et assignment des interventions",
-      },
-      {
-        title: "Checklist de Maintenance",
-        description: "Écran de validation des points de contrôle",
-      },
-      {
-        title: "Historique Machine",
-        description: "Traçabilité complète des maintenances par machine",
-      },
-    ],
-    githubUrl: "",
-    liveUrl: "",
+    cover: gamDashboard,
+
+    gallery: [gamDashboard, gamMachines, gamIntervention, gamChecklist],
   },
 ];
 

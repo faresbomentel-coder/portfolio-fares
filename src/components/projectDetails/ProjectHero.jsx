@@ -36,12 +36,9 @@ function ProjectHero({ project }) {
             Technologies Utilisées
           </h3>
           <div className="flex flex-wrap gap-2">
-            {technologies.map((tech, idx) => (
-              <Badge
-                key={idx}
-                className="bg-white/20 text-white border-white/30"
-              >
-                {tech.name}
+            {technologies.map((tech, index) => (
+              <Badge key={index}>
+                {typeof tech === "string" ? tech : tech.name}
               </Badge>
             ))}
           </div>
@@ -68,7 +65,10 @@ function ProjectHero({ project }) {
 
           {liveUrl ? (
             <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-              <Button variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button
+                variant="outline"
+                className="border-white text-white hover:bg-white/10"
+              >
                 <FaExternalLinkAlt className="mr-2" />
                 Démo Live
               </Button>

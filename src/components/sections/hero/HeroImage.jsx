@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { HiUser } from "react-icons/hi";
-
+import { personalInfo } from "../../../data/personalInfo";
 function HeroImage() {
   return (
     <motion.div
@@ -15,20 +14,15 @@ function HeroImage() {
         <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl transform rotate-6 opacity-20"></div>
 
         {/* Main Card */}
-        <div className="relative bg-white border-2 border-slate-200 rounded-3xl shadow-xl p-8 md:p-12">
-          {/* Avatar Placeholder */}
-          <div className="w-48 h-48 md:w-64 md:h-64 mx-auto bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full flex items-center justify-center">
-            <HiUser className="text-blue-600 opacity-50" size={120} />
+        <div className="relative bg-white border-2 border-slate-200 rounded-3xl shadow-xl p-4 md:p-5">
+          <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden border-4 border-cyan-400 shadow-lg">
+            <img
+              src={personalInfo.profileImage}
+              alt={personalInfo.fullName}
+              className="w-full h-full object-cover object-top"
+            />
           </div>
 
-          {/* Image Note */}
-          <div className="mt-6 text-center">
-            <p className="text-sm text-slate-500 italic">
-              Photo de profil à venir
-            </p>
-          </div>
-
-          {/* Decorative Elements */}
           <div className="absolute -top-4 -right-4 w-20 h-20 bg-cyan-500 rounded-full opacity-20 blur-xl"></div>
           <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-blue-500 rounded-full opacity-20 blur-xl"></div>
         </div>

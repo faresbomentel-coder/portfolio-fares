@@ -1,13 +1,31 @@
+import profileImage from "../assets/images/profile/profile.webp";
+import cvFr from "../assets/cv/CV_Fares_Bomentel_FR.pdf";
+
 export const personalInfo = {
   firstName: "Fares",
   lastName: "Bomentel",
   fullName: "Fares Bomentel",
+
   title: "Développeur Full-Stack Web",
-  subtitle: "React • Laravel • PHP • MySQL",
+  subtitle: "Spécialisé en React, Laravel et APIs REST.",
   description:
-    "Je développe des applications web modernes, responsives et performantes avec React, Laravel et des APIs REST.",
+    "Je développe des applications web modernes, performantes et évolutives avec React et Laravel. J'aime apprendre continuellement, résoudre des problèmes et construire des solutions utiles.",
+
   location: "Casablanca, Maroc",
-  email: "ton-email@gmail.com",
-  phone: "+212 6 XX XX XX XX",
-  cvPath: "/cv/CV_Fares_Bomentel.pdf",
+  mobility: "Disponible pour travailler partout au Maroc.",
+  availability: "Disponible pour un emploi",
+
+  email: "faresbomentel@gmail.com",
+  phone: "+212 6 80 76 23 95",
+  whatsapp: "+212680762395",
+
+  github: "https://github.com/faresbomentel-coder/",
+  linkedin: "https://www.linkedin.com/in/fares-bomentel-07b975403/",
+
+  cvPath: cvFr,
+  profileImage,
+
+  experienceYears: "10+",
+  completedProjects: "2",
+  technologiesCount: "20+",
 };

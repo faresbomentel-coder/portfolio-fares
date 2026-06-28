@@ -9,14 +9,16 @@ import {
 } from "react-icons/fa";
 
 export const contactInfo = {
-  email: "ton-email@gmail.com",
-  phone: "+212 6 XX XX XX XX",
+  email: "faresbomentel@gmail.com",
+  phone: "+212 6 80 76 23 95",
   location: "Casablanca, Maroc",
+  mobility: "Disponible pour travailler partout au Maroc.",
+
   availability: {
-    status: "available", // 'available' | 'busy' | 'unavailable'
+    status: "available",
     title: "Disponible pour un emploi",
     description:
-      "Je suis activement à la recherche d'une opportunité professionnelle pour rejoindre une équipe dynamique et contribuer à des projets concrets et impactants.",
+      "Je suis disponible pour rejoindre une équipe et contribuer au développement d'applications web modernes. Ouvert aux opportunités partout au Maroc.",
   },
 };
 
@@ -24,38 +26,38 @@ export const contactSocials = [
   {
     id: "github",
     name: "GitHub",
-    username: "ton-username",
-    url: "https://github.com/ton-username",
+    username: "faresbomentel-coder",
+    url: "https://github.com/faresbomentel-coder/",
     icon: FaGithub,
-    color: "text-gray-900",
-    bgColor: "bg-gray-100",
+    color: "text-gray-900 dark:text-white",
+    bgColor: "bg-gray-100 dark:bg-slate-800",
   },
   {
     id: "linkedin",
     name: "LinkedIn",
     username: "Fares Bomentel",
-    url: "https://linkedin.com/in/ton-profile",
+    url: "https://www.linkedin.com/in/fares-bomentel-07b975403/",
     icon: FaLinkedin,
     color: "text-blue-600",
-    bgColor: "bg-blue-50",
+    bgColor: "bg-blue-50 dark:bg-slate-800",
   },
   {
     id: "whatsapp",
     name: "WhatsApp",
-    username: "+212 6 XX XX XX XX",
-    url: "https://wa.me/2126XXXXXXXX",
+    username: "+212 6 80 76 23 95",
+    url: "https://wa.me/212680762395",
     icon: FaWhatsapp,
     color: "text-green-600",
-    bgColor: "bg-green-50",
+    bgColor: "bg-green-50 dark:bg-slate-800",
   },
   {
     id: "email",
     name: "Email",
-    username: "ton-email@gmail.com",
-    url: "mailto:ton-email@gmail.com",
+    username: "faresbomentel@gmail.com",
+    url: "mailto:faresbomentel@gmail.com",
     icon: FaEnvelope,
     color: "text-red-600",
-    bgColor: "bg-red-50",
+    bgColor: "bg-red-50 dark:bg-slate-800",
   },
 ];
 

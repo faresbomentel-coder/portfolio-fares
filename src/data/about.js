@@ -1,9 +1,9 @@
 export const about = {
   introduction:
-    "Je suis un développeur Full-Stack Web passionné par la création d'applications web modernes et performantes. Ma spécialisation porte sur React pour le front-end et Laravel pour le back-end, avec une approche centrée sur la qualité du code et l'expérience utilisateur.",
+    "Je suis Fares Bomentel, développeur Full Stack spécialisé en React et Laravel. Après plusieurs années d'expérience professionnelle dans le secteur industriel, j'ai choisi de me réorienter vers le développement web afin de construire des applications modernes et résoudre des problèmes concrets.",
 
   story:
-    "Après plusieurs années d'expérience dans le secteur textile, j'ai décidé de me reconvertir professionnellement vers le développement informatique, un domaine qui m'a toujours attiré. En 2024, j'ai obtenu mon Baccalauréat, puis j'ai rejoint l'OFPPT pour une formation en Développement Web Full Stack. Aujourd'hui, je cherche activement ma première opportunité professionnelle en tant que développeur Full-Stack, prêt à mettre en pratique mes compétences techniques et à contribuer à des projets concrets.",
+    "J'ai découvert le développement web en préparant mon avenir professionnel. Après avoir exploré les formations proposées par l'OFPPT, j'ai choisi la filière Développement Digital – Option Web Full Stack, attiré par la possibilité de créer des applications complètes et utiles. Depuis, je consacre une grande partie de mon temps à apprendre, pratiquer et réaliser des projets Full Stack.",
 
   quickInfo: [
     {
@@ -35,6 +35,6 @@ export const about = {
   availability: {
     status: "Actuellement disponible",
     message:
-      "Je suis motivé à contribuer à des projets réels, continuer à apprendre et évoluer au sein d'une équipe de développement professionnelle.",
+      "Je suis disponible pour rejoindre une équipe, contribuer à des projets web modernes et continuer à développer mes compétences dans un environnement professionnel.",
   },
 };

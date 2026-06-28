@@ -1,8 +1,9 @@
 import Container from "../ui/Container";
 import Card from "../ui/Card";
+import Badge from "../ui/Badge";
 
 function ProjectChallenges({ project }) {
-  const { challenges } = project;
+  const challenges = project.challenges || [];
 
   return (
     <section className="py-12 md:py-16 bg-slate-50 dark:bg-slate-900 transition-colors">
@@ -11,46 +12,40 @@ function ProjectChallenges({ project }) {
           <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
             Défis Techniques
           </h2>
+
           <p className="text-slate-600 dark:text-slate-300 text-center mb-12 max-w-2xl mx-auto">
             Les principaux défis rencontrés et les solutions mises en œuvre.
           </p>
 
-          {/* Challenges List */}
           <div className="space-y-6">
             {challenges.map((challenge, index) => (
               <Card
                 key={index}
-                className="border-l-4 border-l-orange-500 dark:border-l-orange-400 hover:shadow-xl transition-shadow"
+                className="border-l-4 border-l-orange-500 dark:border-l-orange-400"
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center flex-shrink-0 font-bold text-orange-600 dark:text-orange-400">
-                    {index + 1}
+                <div className="space-y-4">
+                  <Badge>Défi {index + 1}</Badge>
+
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                    {challenge.title}
+                  </h3>
+
+                  <div>
+                    <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wide">
+                      Problème
+                    </h4>
+                    <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
+                      {challenge.description}
+                    </p>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
-                      {challenge.title}
-                    </h3>
 
-                    {/* Description */}
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wide">
-                        Défi
-                      </h4>
-                      <p className="text-slate-600 dark:text-slate-300 leading-relaxed">
-                        {challenge.description}
-                      </p>
-                    </div>
-
-                    {/* Solution */}
-                    <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4 border border-green-100 dark:border-green-900/50">
-                      <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 uppercase tracking-wide flex items-center gap-2">
-                        <span>✓</span>
-                        Solution
-                      </h4>
-                      <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                        {challenge.solution}
-                      </p>
-                    </div>
+                  <div className="bg-green-50 dark:bg-green-950/30 rounded-lg p-4 border border-green-100 dark:border-green-900/50">
+                    <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2 uppercase tracking-wide">
+                      Solution
+                    </h4>
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                      {challenge.solution}
+                    </p>
                   </div>
                 </div>
               </Card>

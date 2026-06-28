@@ -12,8 +12,8 @@ function ProjectCard({ project, index }) {
     company,
     shortDescription,
     technologies,
-    githubUrl,
-    liveUrl,
+    github,
+    liveDemo,
   } = project;
 
   return (
@@ -26,8 +26,12 @@ function ProjectCard({ project, index }) {
       <Card className="h-full flex flex-col">
         {/* Header */}
         <div className="mb-4">
-          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">{title}</h3>
-          <p className="text-sm text-blue-600 dark:text-cyan-400 font-semibold">{company}</p>
+          <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+            {title}
+          </h3>
+          <p className="text-sm text-blue-600 dark:text-cyan-400 font-semibold">
+            {company}
+          </p>
         </div>
 
         {/* Description */}
@@ -41,11 +45,15 @@ function ProjectCard({ project, index }) {
             Technologies
           </h4>
           <div className="flex flex-wrap gap-2">
-            {technologies.slice(0, 6).map((tech, idx) => (
-              <Badge key={idx} className="text-xs">
-                {tech.name}
-              </Badge>
-            ))}
+            {technologies.slice(0, 6).map((tech, idx) => {
+              const techName = typeof tech === "string" ? tech : tech.name;
+
+              return (
+                <Badge key={idx} className="text-xs">
+                  {techName}
+                </Badge>
+              );
+            })}
             {technologies.length > 6 && (
               <Badge className="text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
                 +{technologies.length - 6}
@@ -62,9 +70,9 @@ function ProjectCard({ project, index }) {
           </Link>
 
           {/* GitHub Link */}
-          {githubUrl ? (
+          {github ? (
             <a
-              href={githubUrl}
+              href={github}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0"
@@ -86,9 +94,9 @@ function ProjectCard({ project, index }) {
           )}
 
           {/* Live Demo Link */}
-          {liveUrl ? (
+          {liveDemo ? (
             <a
-              href={liveUrl}
+              href={liveDemo}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-shrink-0"

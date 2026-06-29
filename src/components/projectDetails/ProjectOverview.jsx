@@ -1,4 +1,5 @@
 import Container from "../ui/Container";
+import { FaExclamationTriangle, FaCheck } from "react-icons/fa";
 import Card from "../ui/Card";
 
 function ProjectOverview({ project }) {
@@ -13,7 +14,9 @@ function ProjectOverview({ project }) {
             <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-6">
               Vue d'Ensemble
             </h2>
-            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">{overview}</p>
+            <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-lg">
+              {overview}
+            </p>
           </div>
 
           {/* Problem & Solution */}
@@ -22,13 +25,15 @@ function ProjectOverview({ project }) {
             <Card className="bg-red-50 dark:bg-red-950/30 border-red-100 dark:border-red-900/50">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-red-500 dark:bg-red-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-2xl font-bold">⚠</span>
+                  <FaExclamationTriangle className="text-white text-2xl" />{" "}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
                     Problématique
                   </h3>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{problem}</p>
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    {problem}
+                  </p>
                 </div>
               </div>
             </Card>
@@ -37,13 +42,15 @@ function ProjectOverview({ project }) {
             <Card className="bg-green-50 dark:bg-green-950/30 border-green-100 dark:border-green-900/50">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-green-500 dark:bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-2xl font-bold">✓</span>
+                  <FaCheck className="text-white text-2xl" />{" "}
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100 mb-3">
                     Solution Apportée
                   </h3>
-                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">{solution}</p>
+                  <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                    {solution}
+                  </p>
                 </div>
               </div>
             </Card>

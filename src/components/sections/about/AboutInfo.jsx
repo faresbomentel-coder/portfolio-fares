@@ -15,7 +15,13 @@ function AboutInfo() {
         >
           <Card className="flex items-start gap-3 hover:shadow-lg transition-shadow duration-300 min-h-[80px]">
             {/* Icon */}
-            <span className="text-3xl flex-shrink-0">{info.icon}</span>
+            {/* Icon */}
+            <div className="w-12 h-12 rounded-xl bg-blue-100 dark:bg-slate-800 flex items-center justify-center flex-shrink-0">
+              <info.icon
+                size={22}
+                className="text-blue-600 dark:text-cyan-400"
+              />
+            </div>
 
             {/* Content */}
             <div className="flex-1 min-w-0">

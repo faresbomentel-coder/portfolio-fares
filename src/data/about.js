@@ -1,3 +1,9 @@
+import {
+  FaMapMarkerAlt,
+  FaGraduationCap,
+  FaLanguage,
+  FaBriefcase,
+} from "react-icons/fa";
 export const about = {
   introduction:
     "Je suis Fares Bomentel, développeur Full Stack spécialisé en React et Laravel. Après plusieurs années d'expérience professionnelle dans le secteur industriel, j'ai choisi de me réorienter vers le développement web afin de construire des applications modernes et résoudre des problèmes concrets.",
@@ -8,25 +14,25 @@ export const about = {
   quickInfo: [
     {
       id: 1,
-      icon: "📍",
+      icon: FaMapMarkerAlt,
       label: "Localisation",
       value: "Casablanca, Maroc",
     },
     {
       id: 2,
-      icon: "🎓",
+      icon: FaGraduationCap,
       label: "Formation",
       value: "OFPPT – Développement Web Full Stack",
     },
     {
       id: 3,
-      icon: "🌍",
+      icon: FaLanguage,
       label: "Langues",
       value: "Arabe, Français, Anglais",
     },
     {
       id: 4,
-      icon: "💼",
+      icon: FaBriefcase,
       label: "Statut",
       value: "Disponible pour un emploi",
     },

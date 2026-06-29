@@ -1,7 +1,7 @@
 export const stats = [
   {
-    value: "10+",
-    label: "Années d'expérience professionnelle",
+    value: "10+ ans",
+    label: "Expérience en industrie",
   },
   {
     value: "2",

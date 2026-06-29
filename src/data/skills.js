@@ -58,7 +58,13 @@ export const skills = [
     icon: SiJavascript,
     level: "Intermédiaire",
     description: "Développement dynamique avec JavaScript moderne.",
-    concepts: ["Arrow Functions", "Promises", "Async/Await", "Modules", "Destructuring"],
+    concepts: [
+      "Arrow Functions",
+      "Promises",
+      "Async/Await",
+      "Modules",
+      "Destructuring",
+    ],
     usedIn: ["React Apps", "APIs", "Gestion Textile"],
   },
   {
@@ -67,7 +73,8 @@ export const skills = [
     category: "Frontend",
     icon: FaReact,
     level: "Intermédiaire",
-    description: "Création d'interfaces utilisateur interactives et modulaires.",
+    description:
+      "Création d'interfaces utilisateur interactives et modulaires.",
     concepts: ["Components", "Props", "State", "Hooks", "Lifecycle"],
     usedIn: ["Gestion Textile", "GAM", "Portfolio"],
   },
@@ -97,7 +104,8 @@ export const skills = [
     category: "Frontend",
     icon: SiTailwindcss,
     level: "Intermédiaire",
-    description: "Framework CSS utility-first pour un design rapide et moderne.",
+    description:
+      "Framework CSS utility-first pour un design rapide et moderne.",
     concepts: ["Utility Classes", "Responsive", "Custom Config", "Dark Mode"],
     usedIn: ["Portfolio", "Projets récents"],
   },
@@ -119,7 +127,8 @@ export const skills = [
     category: "Backend",
     icon: FaPhp,
     level: "Avancé",
-    description: "Langage serveur pour développer des applications web robustes.",
+    description:
+      "Langage serveur pour développer des applications web robustes.",
     concepts: ["OOP", "Namespaces", "Traits", "PSR Standards", "Sessions"],
     usedIn: ["Tous les projets Laravel"],
   },
@@ -140,7 +149,13 @@ export const skills = [
     icon: HiCode,
     level: "Intermédiaire",
     description: "Conception et développement d'APIs RESTful.",
-    concepts: ["HTTP Methods", "JSON", "Authentication", "Status Codes", "Endpoints"],
+    concepts: [
+      "HTTP Methods",
+      "JSON",
+      "Authentication",
+      "Status Codes",
+      "Endpoints",
+    ],
     usedIn: ["Gestion Textile API", "GAM Backend"],
   },
   {
@@ -149,7 +164,8 @@ export const skills = [
     category: "Backend",
     icon: FaLaravel,
     level: "Avancé",
-    description: "Moteur de templates Laravel pour générer des vues dynamiques.",
+    description:
+      "Moteur de templates Laravel pour générer des vues dynamiques.",
     concepts: ["Templates", "Directives", "Layouts", "Components", "Slots"],
     usedIn: ["Interfaces Laravel"],
   },
@@ -160,7 +176,13 @@ export const skills = [
     icon: FaDatabase,
     level: "Avancé",
     description: "ORM Laravel pour interagir avec la base de données.",
-    concepts: ["Models", "Relationships", "Query Builder", "Eager Loading", "Scopes"],
+    concepts: [
+      "Models",
+      "Relationships",
+      "Query Builder",
+      "Eager Loading",
+      "Scopes",
+    ],
     usedIn: ["Gestion Textile", "GAM"],
   },
   {
@@ -222,7 +244,12 @@ export const skills = [
     icon: FaDatabase,
     level: "Intermédiaire",
     description: "Conception de schémas de bases de données efficaces.",
-    concepts: ["Normalization", "Denormalization", "Schema Design", "Best Practices"],
+    concepts: [
+      "Normalization",
+      "Denormalization",
+      "Schema Design",
+      "Best Practices",
+    ],
     usedIn: ["Tous les projets avec BD"],
   },
   {
@@ -232,7 +259,13 @@ export const skills = [
     icon: FaDatabase,
     level: "Intermédiaire",
     description: "Modélisation conceptuelle et logique des données (Merise).",
-    concepts: ["Entités", "Relations", "Cardinalités", "Clés", "Transformation"],
+    concepts: [
+      "Entités",
+      "Relations",
+      "Cardinalités",
+      "Clés",
+      "Transformation",
+    ],
     usedIn: ["Phase de conception"],
   },
   {
@@ -242,7 +275,13 @@ export const skills = [
     icon: FaDatabase,
     level: "Avancé",
     description: "Gestion des relations entre tables de bases de données.",
-    concepts: ["One-to-Many", "Many-to-Many", "One-to-One", "Foreign Keys", "Pivot Tables"],
+    concepts: [
+      "One-to-Many",
+      "Many-to-Many",
+      "One-to-One",
+      "Foreign Keys",
+      "Pivot Tables",
+    ],
     usedIn: ["Gestion Textile", "GAM"],
   },
   {
@@ -251,7 +290,8 @@ export const skills = [
     category: "Database",
     icon: SiMysql,
     level: "Débutant",
-    description: "Procédures stockées pour optimiser les opérations répétitives.",
+    description:
+      "Procédures stockées pour optimiser les opérations répétitives.",
     concepts: ["Procedures", "Functions", "Triggers", "Performance"],
     usedIn: ["Projets d'optimisation"],
   },
@@ -261,7 +301,8 @@ export const skills = [
     category: "Database",
     icon: FaDatabase,
     level: "Intermédiaire",
-    description: "Gestion des transactions pour garantir l'intégrité des données.",
+    description:
+      "Gestion des transactions pour garantir l'intégrité des données.",
     concepts: ["ACID", "Commit", "Rollback", "Isolation Levels"],
     usedIn: ["Gestion Textile", "Opérations critiques"],
   },
@@ -303,7 +344,8 @@ export const skills = [
     category: "Tools",
     icon: SiGitlab,
     level: "Débutant",
-    description: "Plateforme DevOps complète pour le développement collaboratif.",
+    description:
+      "Plateforme DevOps complète pour le développement collaboratif.",
     concepts: ["CI/CD", "Pipelines", "Repositories", "Merge Requests"],
     usedIn: ["Projets d'entreprise"],
   },
@@ -314,7 +356,13 @@ export const skills = [
     icon: SiPostman,
     level: "Intermédiaire",
     description: "Outil de test et documentation d'APIs REST.",
-    concepts: ["Requests", "Collections", "Environments", "Testing", "Documentation"],
+    concepts: [
+      "Requests",
+      "Collections",
+      "Environments",
+      "Testing",
+      "Documentation",
+    ],
     usedIn: ["Test API Gestion Textile", "GAM API"],
   },
   {
@@ -324,7 +372,13 @@ export const skills = [
     icon: HiCode,
     level: "Avancé",
     description: "Éditeur de code moderne et extensible.",
-    concepts: ["Extensions", "Debugging", "Git Integration", "Shortcuts", "IntelliSense"],
+    concepts: [
+      "Extensions",
+      "Debugging",
+      "Git Integration",
+      "Shortcuts",
+      "IntelliSense",
+    ],
     usedIn: ["Développement quotidien"],
   },
   {
@@ -357,6 +411,17 @@ export const skills = [
     concepts: ["HMR", "Build Optimization", "Dev Server", "Bundling"],
     usedIn: ["Portfolio", "React Apps"],
   },
+  {
+    id: 33,
+    name: "Jira",
+    category: "Tools",
+    icon: HiCode,
+    level: "Débutant",
+    description:
+      "Outil de gestion de projets Agile utilisé pour le suivi des tâches et des sprints.",
+    concepts: ["Boards", "Sprints", "Backlog", "Issues", "Scrum"],
+    usedIn: ["Organisation des projets", "Travail collaboratif"],
+  },
 
   // ============ Concepts ============
   {
@@ -366,7 +431,13 @@ export const skills = [
     icon: HiCode,
     level: "Avancé",
     description: "Programmation Orientée Objet pour un code maintenable.",
-    concepts: ["Classes", "Héritage", "Encapsulation", "Polymorphisme", "Abstraction"],
+    concepts: [
+      "Classes",
+      "Héritage",
+      "Encapsulation",
+      "Polymorphisme",
+      "Abstraction",
+    ],
     usedIn: ["PHP", "Laravel", "JavaScript"],
   },
   {
@@ -375,7 +446,8 @@ export const skills = [
     category: "Concepts",
     icon: HiCode,
     level: "Avancé",
-    description: "Opérations de base sur les données (Create, Read, Update, Delete).",
+    description:
+      "Opérations de base sur les données (Create, Read, Update, Delete).",
     concepts: ["Create", "Read", "Update", "Delete", "REST"],
     usedIn: ["Tous les projets"],
   },
@@ -396,7 +468,13 @@ export const skills = [
     icon: HiCode,
     level: "Avancé",
     description: "Conception d'interfaces adaptatives pour tous les écrans.",
-    concepts: ["Mobile First", "Media Queries", "Flexbox", "Grid", "Breakpoints"],
+    concepts: [
+      "Mobile First",
+      "Media Queries",
+      "Flexbox",
+      "Grid",
+      "Breakpoints",
+    ],
     usedIn: ["Tous les projets frontend"],
   },
   {
@@ -406,7 +484,13 @@ export const skills = [
     icon: HiUserGroup,
     level: "Débutant",
     description: "Méthodologie agile pour la gestion de projets.",
-    concepts: ["Sprints", "User Stories", "Backlog", "Daily Standup", "Retrospective"],
+    concepts: [
+      "Sprints",
+      "User Stories",
+      "Backlog",
+      "Daily Standup",
+      "Retrospective",
+    ],
     usedIn: ["Projets collaboratifs"],
   },
   {
@@ -415,7 +499,8 @@ export const skills = [
     category: "Concepts",
     icon: HiCode,
     level: "Intermédiaire",
-    description: "Langage de modélisation visuelle pour la conception logicielle.",
+    description:
+      "Langage de modélisation visuelle pour la conception logicielle.",
     concepts: ["Diagrammes de Classes", "Use Cases", "Séquences", "Activités"],
     usedIn: ["Phase de conception"],
   },
@@ -425,7 +510,8 @@ export const skills = [
     category: "Concepts",
     icon: HiCode,
     level: "Intermédiaire",
-    description: "Méthode d'analyse et de conception de systèmes d'information.",
+    description:
+      "Méthode d'analyse et de conception de systèmes d'information.",
     concepts: ["MCD", "MLD", "MPD", "MCT", "MOT"],
     usedIn: ["Conception de projets"],
   },
@@ -493,7 +579,12 @@ export const skills = [
     icon: HiTrendingUp,
     level: "Avancé",
     description: "Capacité à s'adapter rapidement aux nouvelles technologies.",
-    concepts: ["Flexibilité", "Ouverture", "Apprentissage continu", "Innovation"],
+    concepts: [
+      "Flexibilité",
+      "Ouverture",
+      "Apprentissage continu",
+      "Innovation",
+    ],
   },
   {
     id: 47,
@@ -510,7 +601,8 @@ export const skills = [
     category: "Soft Skills",
     icon: HiEye,
     level: "Avancé",
-    description: "Attention portée aux détails pour garantir la qualité du code.",
+    description:
+      "Attention portée aux détails pour garantir la qualité du code.",
     concepts: ["Précision", "Qualité", "Code Review", "Testing"],
   },
 
@@ -539,7 +631,8 @@ export const skills = [
     category: "Languages",
     icon: MdLanguage,
     level: "Intermédiaire",
-    description: "Compréhension de la documentation technique et des ressources en anglais.",
+    description:
+      "Compréhension de la documentation technique et des ressources en anglais.",
     concepts: ["Lecture technique", "Documentation", "StackOverflow", "GitHub"],
   },
 ];

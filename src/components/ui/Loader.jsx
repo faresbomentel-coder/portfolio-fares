@@ -24,20 +24,18 @@ function Loader() {
           }}
         />
 
-        <motion.p
-          className="mt-8 text-cyan-400 text-xl md:text-2xl font-bold tracking-[0.5em] uppercase"
+        <motion.div
+          className="mt-8 w-64 h-2 bg-slate-800 rounded-full overflow-hidden"
           animate={{ opacity: [0.4, 1, 0.4] }}
           transition={{ duration: 1.4, repeat: Infinity }}
         >
-          <div className="mt-8 w-64 h-2 bg-slate-800 rounded-full overflow-hidden">
-            <motion.div
-              className="h-full bg-gradient-to-r from-cyan-400 to-blue-600"
-              initial={{ width: "0%" }}
-              animate={{ width: "100%" }}
-              transition={{ duration: 1.2 }}
-            />
-          </div>
-        </motion.p>
+          <motion.div
+            className="h-full bg-gradient-to-r from-cyan-400 to-blue-600"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 1.2 }}
+          />
+        </motion.div>
       </motion.div>
     </div>
   );

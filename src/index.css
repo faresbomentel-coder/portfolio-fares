@@ -1,7 +1,15 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 /* Smooth scrolling behavior */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Offset for fixed navbar height */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

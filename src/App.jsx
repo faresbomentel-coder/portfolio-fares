@@ -35,7 +35,7 @@ function App() {
       <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-slate-950 transition-colors">
         <Navbar />
 
-        <main className="flex-1">
+        <main className="flex-1 pt-28">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

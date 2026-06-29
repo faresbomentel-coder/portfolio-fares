@@ -140,7 +140,7 @@ export const projects = [
       "J'ai développé une solution permettant d'organiser les interventions, d'affecter les techniciens, de remplir les checklists et de calculer les alertes de maintenance selon les cycles définis pour chaque machine.",
     technologies: [
       {
-        name: "React",
+        name: "blade",
         color: "cyan",
       },
       {
@@ -175,6 +175,13 @@ export const projects = [
       "Organisation claire des checklists et de l'historique des interventions.",
     ],
     cover: gamDashboard,
+    architecture: [
+      "Blade Views",
+      "Routes Web",
+      "Laravel Controllers",
+      "Eloquent Models",
+      "MySQL Database",
+    ],
 
     gallery: [gamDashboard, gamMachines, gamIntervention, gamChecklist],
   },

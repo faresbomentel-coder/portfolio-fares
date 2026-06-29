@@ -11,7 +11,8 @@ function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="border-b bg-white dark:bg-slate-950 dark:border-slate-800 transition-colors">
+    <nav className="fixed top-0 left-0 right-0 z-50  bg-white/90 dark:bg-slate-950/90 backdrop-blur-md dark:border-slate-800 transition-colors">
+      {" "}
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <NavLink to="/" onClick={closeMenu} className="flex items-center gap-3">
           <img
@@ -56,7 +57,6 @@ function Navbar() {
           </button>
         </div>
       </div>
-
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="md:hidden border-t bg-white dark:bg-slate-950 dark:border-slate-800">

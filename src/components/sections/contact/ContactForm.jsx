@@ -13,6 +13,8 @@ function ContactForm() {
 
   const [errors, setErrors] = useState({});
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const validateEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -61,23 +63,54 @@ function ContactForm() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
-      // Show success message
-      setIsSubmitted(true);
+    if (!validateForm()) return;
 
-      // Reset form after 3 seconds
-      setTimeout(() => {
+    setIsLoading(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/faresbomentel@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+          }),
+        },
+      );
+
+      const result = await response.json();
+
+      if (result.success === "true") {
+        setIsSubmitted(true);
+
         setFormData({
           name: "",
           email: "",
           subject: "",
           message: "",
         });
-        setIsSubmitted(false);
-      }, 3000);
+
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 3000);
+      } else {
+        setSubmitError("Une erreur est survenue lors de l'envoi.");
+      }
+    } catch (error) {
+      setSubmitError("Impossible d'envoyer le message.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -120,7 +153,9 @@ function ContactForm() {
             value={formData.name}
             onChange={handleChange}
             className={`w-full px-4 py-3 border ${
-              errors.name ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+              errors.name
+                ? "border-red-500"
+                : "border-slate-300 dark:border-slate-700"
             } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="Votre nom complet"
           />
@@ -144,7 +179,9 @@ function ContactForm() {
             value={formData.email}
             onChange={handleChange}
             className={`w-full px-4 py-3 border ${
-              errors.email ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+              errors.email
+                ? "border-red-500"
+                : "border-slate-300 dark:border-slate-700"
             } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="votre.email@exemple.com"
           />
@@ -168,7 +205,9 @@ function ContactForm() {
             value={formData.subject}
             onChange={handleChange}
             className={`w-full px-4 py-3 border ${
-              errors.subject ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+              errors.subject
+                ? "border-red-500"
+                : "border-slate-300 dark:border-slate-700"
             } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="Le sujet de votre message"
           />
@@ -192,7 +231,9 @@ function ContactForm() {
             onChange={handleChange}
             rows="6"
             className={`w-full px-4 py-3 border ${
-              errors.message ? "border-red-500" : "border-slate-300 dark:border-slate-700"
+              errors.message
+                ? "border-red-500"
+                : "border-slate-300 dark:border-slate-700"
             } rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-cyan-400 focus:border-transparent transition-all resize-none bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500`}
             placeholder="Votre message..."
           />
@@ -202,8 +243,11 @@ function ContactForm() {
         </div>
 
         {/* Submit Button */}
-        <Button type="submit" className="w-full">
-          Envoyer le message
+        {submitError && (
+          <p className="text-red-500 text-sm text-center">{submitError}</p>
+        )}
+        <Button type="submit" className="w-full" disabled={isLoading}>
+          {isLoading ? "Envoi en cours..." : "Envoyer le message"}
         </Button>
       </form>
     </Card>

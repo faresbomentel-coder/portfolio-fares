@@ -91,7 +91,7 @@ function ContactForm() {
 
       const result = await response.json();
 
-      if (result.success === "true") {
+      if (result.success === true || result.success === "true") {
         setIsSubmitted(true);
 
         setFormData({

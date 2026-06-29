@@ -14,15 +14,19 @@ function Contact() {
           description="N'hésitez pas à me contacter pour discuter d'opportunités professionnelles ou de collaborations."
         />
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="lg:col-span-3">
+              <ContactAvailability />
+            </div>
 
-          {/* Right Column: Info, Socials & Availability */}
-          <div className="space-y-6">
-            <ContactAvailability />
-            <ContactInfo />
-            <ContactSocials />
+            <div className="lg:col-span-1">
+              <ContactInfo />
+            </div>
+
+            <div className="lg:col-span-2">
+              <ContactSocials />
+            </div>
           </div>
         </div>
       </Container>

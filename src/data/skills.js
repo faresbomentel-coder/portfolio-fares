@@ -48,7 +48,7 @@ export const skills = [
     icon: FaCss3Alt,
     level: "Avancé",
     description: "Stylisation moderne et responsive avec CSS3.",
-    concepts: ["Flexbox", "Grid", "Animations", "Media Queries"],
+    concepts: ["Flexbox", "Grid", "Animations", "Media Queries", "Position"],
     usedIn: ["Tous les projets web"],
   },
   {
@@ -59,11 +59,16 @@ export const skills = [
     level: "Intermédiaire",
     description: "Développement dynamique avec JavaScript moderne.",
     concepts: [
+      "Les bases du langage",
+      "Fonctions",
+      "Objets et tableaux",
+      "Manipulation du DOM",
       "Arrow Functions",
       "Promises",
       "Async/Await",
-      "Modules",
       "Destructuring",
+      "POO",
+      "Regex",
     ],
     usedIn: ["React Apps", "APIs", "Gestion Textile"],
   },
@@ -75,7 +80,17 @@ export const skills = [
     level: "Intermédiaire",
     description:
       "Création d'interfaces utilisateur interactives et modulaires.",
-    concepts: ["Components", "Props", "State", "Hooks", "Lifecycle"],
+    concepts: [
+      "Components",
+      "Props",
+      "State",
+      "Hooks",
+      "Lifecycle",
+      "Context API",
+      "Forms",
+      "Events",
+      "JSX",
+    ],
     usedIn: ["Gestion Textile", "GAM", "Portfolio"],
   },
   {
@@ -95,7 +110,7 @@ export const skills = [
     icon: FaReact,
     level: "Débutant",
     description: "Gestion d'état global pour les applications complexes.",
-    concepts: ["Store", "Slices", "Actions", "Reducers", "Thunks"],
+    concepts: ["Store", "Slices", "Actions", "Reducers", "Selectors"],
     usedIn: ["GAM"],
   },
   {
@@ -129,7 +144,14 @@ export const skills = [
     level: "Avancé",
     description:
       "Langage serveur pour développer des applications web robustes.",
-    concepts: ["OOP", "Namespaces", "Traits", "PSR Standards", "Sessions"],
+    concepts: [
+      "OOP",
+      "Namespaces",
+      "Traits",
+      "Sessions",
+      "PDO",
+      "Error Handling",
+    ],
     usedIn: ["Tous les projets Laravel"],
   },
   {
@@ -139,7 +161,20 @@ export const skills = [
     icon: FaLaravel,
     level: "Avancé",
     description: "Framework PHP pour créer des applications web élégantes.",
-    concepts: ["Routing", "Middleware", "Controllers", "Migrations", "Artisan"],
+    concepts: [
+      "Routing",
+      "Migrations",
+      "Models",
+      "Middleware",
+      "Controllers",
+      "Migrations",
+      "Artisan",
+      "Eloquent ORM",
+      "Blade",
+      "Validation",
+      "Authentication",
+      "REST API",
+    ],
     usedIn: ["Gestion Textile", "GAM", "API REST"],
   },
   {
@@ -224,7 +259,22 @@ export const skills = [
     icon: SiMysql,
     level: "Avancé",
     description: "Système de gestion de base de données relationnelle.",
-    concepts: ["Tables", "Queries", "Joins", "Indexes", "Optimization"],
+    concepts: [
+      "CRUD",
+      "Clauses",
+      "Opérateurs",
+      "Tables",
+      "Queries",
+      "Fonctions SQL",
+      "Joins",
+      "Transactions",
+      "Déclencheurs",
+      "Rôles",
+      "Permissions",
+      "Procédures stockées",
+      "Indexes",
+      "Optimization",
+    ],
     usedIn: ["Gestion Textile", "GAM"],
   },
   {
@@ -234,7 +284,21 @@ export const skills = [
     icon: SiMongodb,
     level: "Débutant",
     description: "Base de données NoSQL orientée documents.",
-    concepts: ["Collections", "Documents", "Aggregation", "Indexes"],
+    concepts: [
+      "CRUD",
+      "Collections",
+      "Documents",
+      "Aggregation",
+      "Indexes",
+      "Opérateurs de comparaison",
+      "Opérateurs logiques",
+      "Opérateurs d'élément",
+      "Opérateurs sur les tableaux",
+      "Opérateurs de mise à jour",
+      "Tri et pagination",
+      "Roles et permissions",
+      "PyMongo et Mongoose",
+    ],
     usedIn: ["Projets d'apprentissage"],
   },
   {
@@ -303,7 +367,7 @@ export const skills = [
     level: "Intermédiaire",
     description:
       "Gestion des transactions pour garantir l'intégrité des données.",
-    concepts: ["ACID", "Commit", "Rollback", "Isolation Levels"],
+    concepts: ["Commit", "Rollback", "Isolation Levels"],
     usedIn: ["Gestion Textile", "Opérations critiques"],
   },
   {
@@ -325,7 +389,7 @@ export const skills = [
     icon: FaGitAlt,
     level: "Intermédiaire",
     description: "Système de contrôle de version pour gérer le code source.",
-    concepts: ["Commits", "Branches", "Merge", "Rebase", "Workflow"],
+    concepts: ["Commits", "Branches", "Merge", "Rebase", "Workflow","..."],
     usedIn: ["Tous les projets"],
   },
   {
@@ -408,7 +472,7 @@ export const skills = [
     icon: SiVite,
     level: "Intermédiaire",
     description: "Build tool moderne et rapide pour les applications frontend.",
-    concepts: ["HMR", "Build Optimization", "Dev Server", "Bundling"],
+    concepts: [ "Build Optimization", "Dev Server", "Bundling"],
     usedIn: ["Portfolio", "React Apps"],
   },
   {
@@ -473,7 +537,6 @@ export const skills = [
       "Media Queries",
       "Flexbox",
       "Grid",
-      "Breakpoints",
     ],
     usedIn: ["Tous les projets frontend"],
   },
@@ -512,7 +575,7 @@ export const skills = [
     level: "Intermédiaire",
     description:
       "Méthode d'analyse et de conception de systèmes d'information.",
-    concepts: ["MCD", "MLD", "MPD", "MCT", "MOT"],
+    concepts: ["MCD", "MLD","..."],
     usedIn: ["Conception de projets"],
   },
   {
@@ -633,7 +696,7 @@ export const skills = [
     level: "Intermédiaire",
     description:
       "Compréhension de la documentation technique et des ressources en anglais.",
-    concepts: ["Lecture technique", "Documentation", "StackOverflow", "GitHub"],
+    concepts: ["Lecture technique", "Documentation", "GitHub"],
   },
 ];
 

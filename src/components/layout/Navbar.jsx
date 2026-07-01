@@ -11,7 +11,7 @@ function Navbar() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50  bg-white/90 dark:bg-slate-950/90 backdrop-blur-md dark:border-slate-800 transition-colors">
+    <nav className="fixed top-0 left-0 right-0 z-50  bg-blue-50 dark:bg-slate-950/90 backdrop-blur-md dark:border-slate-800 transition-colors">
       {" "}
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <NavLink to="/" onClick={closeMenu} className="flex items-center gap-3">
@@ -27,7 +27,6 @@ function Navbar() {
           </span>
         </NavLink>
 
-        {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6 items-center">
           {navigationLinks.map((link) => (
             <NavLink
@@ -45,7 +44,6 @@ function Navbar() {
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Controls */}
         <div className="md:hidden flex items-center gap-3">
           <ThemeToggle />
           <button

@@ -11,11 +11,10 @@ function ProjectArchitecture({ project }) {
           <h2 className="text-3xl font-bold text-slate-900 dark:text-slate-100 mb-4 text-center">
             Architecture Technique
           </h2>
-
+          
           <p className="text-slate-600 dark:text-slate-300 text-center mb-12 max-w-2xl mx-auto">
             Structure et organisation technique du projet.
           </p>
-
           <Card className="bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-slate-900 dark:to-slate-800 border-blue-100 dark:border-slate-700">
             {Array.isArray(architecture) ? (
               <div className="flex flex-col items-center gap-3">

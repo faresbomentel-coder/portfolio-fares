@@ -6,7 +6,7 @@ function SkillTabs({ categories, activeCategory, onCategoryChange }) {
       {/* Tabs Container - Horizontal scroll on mobile */}
       <div className="relative">
         <div className="overflow-x-auto pb-2 -mx-6 px-6 md:mx-0 md:px-0 scrollbar-hide">
-          <div className="flex gap-3 min-w-max md:min-w-0 md:flex-wrap md:justify-center">
+          <div className="flex gap-3 min-w-max md:min-w-0 md:flex-wrap md:justify-center  bg-blue-100 rounded-2xl p-3 dark:bg-slate-800 transition-colors">
             {categories.map((category) => {
               const isActive = category === activeCategory;
               return (

@@ -56,7 +56,8 @@ export const education = [
   {
     id: 1,
     diploma: "Diplôme Développement Digital – Option Web Full Stack",
-    institution: "OFPPT (Office de la Formation Professionnelle et de la Promotion du Travail)",
+    institution:
+      "OFPPT (Office de la Formation Professionnelle et de la Promotion du Travail)",
     period: "2024 – 2026",
     startYear: 2024,
     endYear: 2026,

@@ -38,14 +38,7 @@ export const projects = [
 
     solution:
       "J'ai conçu une application basée sur React et Laravel REST API afin de centraliser les données, automatiser le suivi des opérations et offrir un tableau de bord clair pour le gestionnaire et le propriétaire.",
-    technologies: [
-      "React",
-      "Laravel",
-      "PHP",
-      "MySQL",
-      "Tailwind CSS",
-      "REST API",
-    ],
+    technologies: ["React", "Laravel", "MySQL", "Tailwind CSS", "REST API"],
 
     features: [
       "Gestion des fournisseurs",
@@ -57,11 +50,11 @@ export const projects = [
       "Gestion des livraisons",
       "Dashboard statistique",
     ],
-    challenges: [
-      "Modéliser des relations complexes entre commandes, sous-commandes, fils, machines et productions.",
-      "Gérer le suivi du stock de fils et les besoins liés à chaque sous-commande.",
-      "Organiser les données de production pour obtenir des statistiques exploitables.",
-    ],
+    // challenges: [
+    //   "Modéliser des relations complexes entre commandes, sous-commandes, fils, machines et productions.",
+    //   "Gérer le suivi du stock de fils et les besoins liés à chaque sous-commande.",
+    //   "Organiser les données de production pour obtenir des statistiques exploitables.",
+    // ],
 
     results: [
       "Centralisation des informations de production textile dans une seule application.",
@@ -81,25 +74,25 @@ export const projects = [
 
     challenges: [
       {
-        title: "Cycle de maintenance",
+        title: "Modélisation complexe",
         description:
-          "Gérer les maintenances selon des cycles de 30 ou 60 jours pour chaque machine.",
+          "Gérer les relations entre fournisseurs, fils, commandes, sous-commandes, machines, productions, pièces et livraisons.",
         solution:
-          "Calcul automatique des alertes selon la dernière date de maintenance et la durée du cycle.",
+          "Création d'une structure de données claire avec des relations adaptées entre les entités principales.",
       },
       {
-        title: "Affectation des techniciens",
+        title: "Suivi du stock de fils",
         description:
-          "Organiser les interventions avec plusieurs techniciens et un responsable checklist.",
+          "Assurer un suivi précis des quantités de fils utilisées dans les sous-commandes et la production.",
         solution:
-          "Utilisation de relations pivot entre interventions, techniciens et machines.",
+          "Mise en place d'un système de gestion du stock avec calculs des quantités et indicateurs de disponibilité.",
       },
       {
-        title: "Checklist",
+        title: "Statistiques de production",
         description:
-          "Permettre au technicien de remplir une checklist claire pour chaque intervention.",
+          "Organiser les données de production afin d'afficher des statistiques exploitables pour le gestionnaire et le propriétaire.",
         solution:
-          "Création d'un module checklist lié à l'intervention, la machine et le technicien responsable.",
+          "Développement d'un tableau de bord avec des indicateurs sur les commandes, productions, pièces, défauts et stocks.",
       },
     ],
     gallery: [
@@ -151,6 +144,14 @@ export const projects = [
         name: "PHP",
         color: "indigo",
       },
+      {
+        name: "Breeze",
+        color: "",
+      },
+      {
+        name: "tailwind css",
+        color: "teal",
+      },
     ],
 
     features: [
@@ -159,14 +160,30 @@ export const projects = [
       "Gestion des interventions",
       "Checklist",
       "Dashboard",
-      "Alertes",
-      "Historique",
       "Authentification",
     ],
     challenges: [
-      "Organiser les relations entre clients, machines, techniciens, interventions et checklists.",
-      "Gérer les cycles de maintenance de 30 ou 60 jours pour chaque machine.",
-      "Mettre en place une logique d'alertes pour suivre les prochaines interventions.",
+      {
+        title: "Gestion des interventions",
+        description:
+          "Organiser les relations entre les clients, les machines, les techniciens, les interventions et les checklists tout en assurant un suivi cohérent des opérations.",
+        solution:
+          "Mise en place de relations Eloquent adaptées avec des tables pivot pour gérer les affectations des techniciens, des machines et des interventions.",
+      },
+      {
+        title: "Cycle de maintenance",
+        description:
+          "Suivre automatiquement les maintenances de chaque machine selon un cycle de 30 ou 60 jours afin d'éviter les retards et les oublis.",
+        solution:
+          "Calcul automatique de la prochaine maintenance à partir de la dernière intervention et génération d'indicateurs d'état selon le temps restant.",
+      },
+      {
+        title: "Système d'alertes",
+        description:
+          "Informer les administrateurs des maintenances à venir et identifier rapidement les machines nécessitant une intervention.",
+        solution:
+          "Développement d'un système d'alertes visuelles avec différents niveaux de priorité affichés dans le tableau de bord.",
+      },
     ],
 
     results: [

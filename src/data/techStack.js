@@ -117,4 +117,3 @@ export const techStack = [
     category: "Tools",
   },
 ];
-

@@ -1,5 +1,5 @@
 import profileImage from "../assets/images/profile/profile.webp";
-import cvFr from "../assets/cv/CV_Fares_Bomentel_FR.pdf";
+import cvFr from "../assets/cv/Fares_Bomentel_Developpeur_Web_Full_Stack.pdf";
 
 export const personalInfo = {
   firstName: "Fares",

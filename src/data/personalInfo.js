@@ -1,5 +1,4 @@
 import profileImage from "../assets/images/profile/profile.webp";
-import cvFr from "../assets/cv/Fares_Bomentel_Developpeur_Web_Full_Stack.pdf";
 
 export const personalInfo = {
   firstName: "Fares",
@@ -21,8 +20,8 @@ export const personalInfo = {
 
   github: "https://github.com/faresbomentel-coder/",
   linkedin: "https://www.linkedin.com/in/fares-bomentel-07b975403/",
+  cvPath: "/cv/Fares_Bomentel_Developpeur_Web_Full_Stack.pdf",
 
-  cvPath: cvFr,
   profileImage,
 
   experienceYears: "10+",

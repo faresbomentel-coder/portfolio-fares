@@ -87,8 +87,6 @@ function HeroContent() {
         <a
           href={personalInfo.cvPath}
           download="Fares_Bomentel_Developpeur_Web_Full_Stack.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
         >
           <Button variant="primary">Télécharger CV</Button>
         </a>

@@ -70,7 +70,10 @@ function HeroContent() {
         transition={{ delay: 0.7 }}
         className="flex items-center gap-2 text-slate-600 dark:text-slate-300"
       >
-        <HiLocationMarker className="text-blue-600 dark:text-cyan-400" size={20} />
+        <HiLocationMarker
+          className="text-blue-600 dark:text-cyan-400"
+          size={20}
+        />
         <span>{personalInfo.location}</span>
       </motion.div>
 
@@ -81,7 +84,10 @@ function HeroContent() {
         transition={{ delay: 0.8 }}
         className="flex flex-wrap gap-4 pt-4"
       >
-        <a href={personalInfo.cvPath} download>
+        <a
+          href={personalInfo.cvPath}
+          download="Fares_Bomentel_Developpeur_Web_Full_Stack.pdf"
+        >
           <Button variant="primary">Télécharger CV</Button>
         </a>
         <Link to="/contact">

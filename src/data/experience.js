@@ -34,24 +34,6 @@ export const professionalExperiences = [
   },
 ];
 
-export const otherExperiences = [
-  {
-    id: 1,
-    name: "Jardinage",
-    description: "Expérience pratique en entretien d'espaces verts",
-  },
-  {
-    id: 2,
-    name: "Ateliers Industriels",
-    description: "Participation à diverses activités industrielles",
-  },
-  {
-    id: 3,
-    name: "Activités de Commerce",
-    description: "Expérience dans le secteur commercial",
-  },
-];
-
 export const education = [
   {
     id: 1,

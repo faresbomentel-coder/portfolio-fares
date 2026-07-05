@@ -34,6 +34,8 @@ export const professionalExperiences = [
   },
 ];
 
+
+
 export const education = [
   {
     id: 1,

@@ -14,16 +14,20 @@ function Experience() {
   const yearsOfExperience = getTextileExperience();
 
   return (
-    <section
-      id="experience"
-      className="py-16 md:py-20 bg-slate-50 dark:bg-slate-900 transition-colors"
-    >
+    <section id="experience" className="py-16 md:py-20 bg-slate-50 dark:bg-slate-900 transition-colors">
       <Container>
         <SectionTitle
           subtitle="Parcours"
           title="Expérience & Formation"
           description={`${yearsOfExperience} ans d'expérience dans le secteur textile, complétés par une formation en développement web Full Stack.`}
         />
+
+        {/* Professional Experience */}
+        <div className="mb-16">
+          <ExperienceTimeline
+            experiences={professionalExperiences}
+          />
+        </div>
 
         {/* Education */}
         <div className="mb-16">

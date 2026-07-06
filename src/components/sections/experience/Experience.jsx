@@ -27,7 +27,7 @@ function Experience() {
           <ExperienceTimeline
             experiences={professionalExperiences}
           />
-        </div>
+        </div> 
 
         {/* Education */}
         <div className="mb-16">
